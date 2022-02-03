@@ -1,0 +1,44 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+   <%@ taglib   uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>List of Users</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+<style>
+	<%@include file="/cssfiles/header.css"%>
+</style>
+</head>
+
+<body>
+<c:if test="${!empty sessionScope.user}">
+<%--   <h1>Welcome ${user.firstname} ${user.lastname}</h1> --%>
+  
+  <div id="links">
+	  <div id="link">
+		  <div id="left">
+			  <a class="active" href="http://localhost:8080/DaawMiniProject/loginServlet"> <img alt="logo" src="images/logo3.png" class="logo"/> </a>
+		  </div>
+		  <div id="right">
+		      <a href="http://localhost:8080/DaawMiniProject/groupList">Student</a>
+			  <a href="http://localhost:8080/DaawMiniProject/ProfListServlet">Teacher</a>
+		 	  <a href="http://localhost:8080/DaawMiniProject/logoutServlet"> Logout <i class="fa fa-sign-out" aria-hidden="true"></i> </a>
+		  </div>
+	  </div>
+ </div>
+
+<!-- <br> -->
+<!-- <br> -->
+</c:if>	
+
+<c:if test="${empty sessionScope.user}">
+  <h1>Welcome to My Web Application</h1>
+</c:if>	
+
+</body>
+</html>

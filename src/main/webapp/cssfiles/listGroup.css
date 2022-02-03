@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.header{ 
+	text-align: center;
+	font-size: 25px;
+	text-transform: capitalize;
+	margin-bottom: 0;
+	margin-top: 10px;
+}
+
+button{
+	height: 30px;
+	background-color: pink;
+	color: black;
+	cursor: pointer;
+	margin: 0;
+	padding: 7px;
+	width: 100px;
+	border: none;
+	border-radius: 7px;
+	font-weight: bold;
+}
+
+
+
+.table{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.userTable {
+  border-collapse: collapse;
+  margin: 15px 0;
+  min-width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 15);
+}
+
+#tableBody a {
+	color: black;
+
+}
+
+.userTable thead tr {
+  background-color: pink;
+  font-weight: bold;
+  color: rgba(15, 27, 6, 0.822);
+  text-align: left;
+}
+
+.userTable tr {
+  border-bottom: 1px solid gray;
+}
+
+.userTable thead th,
+.userTable tbody td {
+  padding: 7px 35px;
+  text-align: left;
+  
+}
+
+.userTable tbody td a i{
+  color: red;
+}
+
+
+.userTable tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+
+.status{
+	display: flex ; 
+	justify-content: left;
+}
+
+.present{
+	border: none;
+	background-color: green	;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.absent{
+	border: none;
+	background-color: red;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

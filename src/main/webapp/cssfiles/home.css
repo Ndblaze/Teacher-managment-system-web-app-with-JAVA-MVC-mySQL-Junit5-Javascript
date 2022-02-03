@@ -1,0 +1,26 @@
+@charset "ISO-8859-1";
+
+#container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 85vh;
+}
+
+#content{
+	background-image: url("images/background3.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 75vh;
+	width: 50%;
+}
+
+.color{
+	background-color: rgba(255, 255, 255, 0.7);
+	height: 100%;
+	width: 100%;
+}
+
+h1, p{
+	text-align: center;
+}

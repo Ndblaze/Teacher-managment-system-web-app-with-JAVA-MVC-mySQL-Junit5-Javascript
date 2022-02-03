@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#update{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 80vh;
+}
+
+#content{
+	width: 40%;
+	border: 1px solid  pink;
+	padding: 15px;
+	border-radius: 10px;
+}
+
+form {
+  width: 100%;
+}
+
+h1{
+	margin-bottom: 5px;
+	color: pink;
+	margin-left: 10px;
+}
+
+hr{
+	margin-bottom: 30px;
+	border: none;
+	border-top: 2px solid pink; 
+}
+
+.error{
+	font-style: italic;
+	display: none;
+}
+
+.sharedRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.sharedRow div {
+  width: 45%;
+  margin-bottom: 10px;
+}
+
+label{
+	color: gray;
+	margin-left: 5px;
+}
+
+span{
+	color: red;
+}
+
+.group{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.group div{
+  width: 98%;	
+  margin-left: 10px;
+}
+
+
+.inputBox {
+  width: 95%;
+  height: 35px;
+  border-radius: 10px;
+  padding-left: 10px;
+  border: 1px solid black;
+  outline: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.inputBox:hover {
+  border: 1px solid pink;
+}
+
+.ChooseModule{
+	margin-left: 15px;
+	margin-bottom: 15px;
+}
+
+#module{
+	margin-left: 15px;
+}
+
+.button {
+  width: 20%;
+  height: 40px;
+  padding: 5px;
+  color: black;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: pink;
+  margin-right: 10px;
+  margin-left: 15px;
+}
+
+.button:hover {
+  border: 2px solid pink;
+  background-color: transparent;
+  font-weight: bold;
+}
+
+
+
