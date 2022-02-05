@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import model.User;
 import model.UserDAO;
 
-class checkUserTest {
+class checkAdminTest {
  
 	UserDAO user ;
 	static User userInfo ;
@@ -28,6 +28,23 @@ class checkUserTest {
 		  userInfo = expected ;
 		//then
 		  assertNotNull(expected);
+	}
+	
+	@Test
+	void checkLoginUserDoesNotExist() throws InstantiationException, IllegalAccessException {
+		
+		//given
+		   user = new UserDAO();
+		   
+		   String username = "sola";
+		   String password = "123";
+		   String type = "Admin";
+		   
+		//when
+		  User expected = user.checkLogin(username, password, type);
+		  userInfo = expected ;
+		//then
+		  assertNull(expected);
 	}
 	
 	
