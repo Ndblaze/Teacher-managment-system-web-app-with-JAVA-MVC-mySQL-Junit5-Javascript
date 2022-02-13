@@ -58,7 +58,7 @@ public class updateServlet extends HttpServlet {
 						User NewGroup = new User() ;
 						NewGroup.setGroup(request.getParameter("group"));
 						UserDAO MyUserDAO = new UserDAO();
-					    MyUserDAO.createGrou(myUser);			
+					    MyUserDAO.createGroup(myUser);			
 					}
 				} catch (InstantiationException | IllegalAccessException e1) {					
 					e1.printStackTrace();

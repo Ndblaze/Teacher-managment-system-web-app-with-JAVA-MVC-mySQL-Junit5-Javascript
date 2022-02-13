@@ -229,7 +229,7 @@ public void addUser(User user) throws InstantiationException, IllegalAccessExcep
 		}
 	}
 	 
-public void addTeacher(User user) throws InstantiationException, IllegalAccessException {
+public boolean addTeacher(User user) throws InstantiationException, IllegalAccessException {
 		String requete;
 		PreparedStatement stmt;
 		connectDB();
@@ -250,9 +250,13 @@ public void addTeacher(User user) throws InstantiationException, IllegalAccessEx
 			stmt.close();
 			
 			System.out.println("Inserted !");
+			
 		} catch (SQLException e) {
 			System.out.println(e);
+			return false;
 		}
+		
+		return true ;
 	}
 	
 public void addStudent(User user) throws InstantiationException, IllegalAccessException {
@@ -997,28 +1001,12 @@ public void createGroup(User user) throws InstantiationException, IllegalAccessE
 		stmt.setString(1,user.getGroup());			
 		stmt.executeUpdate();
 		stmt.close();
-
 		System.out.println("Inserted !");
+		
 	} catch (SQLException e) {
 		System.out.println(e);
 	}
 }
 
-public void createGrou(User user) throws InstantiationException, IllegalAccessException {
-
-	String requete;
-	PreparedStatement stmt;
-	connectDB();
-	try {
-		requete = "INSERT INTO `tp3`.`groups` (`group`) VALUES (?);";			
-		stmt = connection.prepareStatement(requete);
-		stmt.setString(1, user.getGroup());		
-		stmt.executeUpdate();
-		stmt.close();
-		System.out.println("Inserted !");
-	} catch (SQLException e) {
-		System.out.println(e);
-	}
-}
 
 }
