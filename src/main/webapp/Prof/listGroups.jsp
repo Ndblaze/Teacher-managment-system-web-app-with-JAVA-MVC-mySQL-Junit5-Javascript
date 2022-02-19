@@ -19,19 +19,19 @@
 
 <div class="table">
      <div>
-    <h1 class="header">List of Groups</h1>
+    <h1 class="header">Add Group Session</h1>
      <table class="userTable" >
            <thead>
                <tr> 
                    <th>Group</th>
-                   <th>List</th>
+                   <th>Add</th>
                 </tr>
             
               <tbody id="tableBody">       
                 <c:forEach var="i" begin="0" end="${usersList.size()-1}" step="1">
                    <tr>
                     <td>  <c:out value="${usersList[i].group}" /> </td>
-                    <td> <a href="/DaawMiniProject/addSession?group=${usersList[i].group}"> list</a></td>
+                    <td> <a href="/DaawMiniProject/addSession?group=${usersList[i].group}"> <i class="fa fa-plus list"></a></td>
                   </tr>
                  </c:forEach>           
             </tbody>    

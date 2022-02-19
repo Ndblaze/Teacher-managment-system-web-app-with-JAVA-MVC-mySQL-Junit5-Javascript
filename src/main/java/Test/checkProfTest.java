@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import model.User;
@@ -18,6 +19,7 @@ class checkProfTest {
 
 	@BeforeEach
 	@Test
+	@Tag("Prof")
 	@DisplayName("Prof Should Login")
 	void checkLogin() throws InstantiationException, IllegalAccessException {
 	
@@ -37,6 +39,7 @@ class checkProfTest {
 	}
 	
 	@Test
+	@Tag("Prof")
 	@DisplayName("Prof should not Login")
     void checkLoginUserDoesNotExist() throws InstantiationException, IllegalAccessException {
 		
@@ -57,6 +60,7 @@ class checkProfTest {
 
 	
 	@Test
+	@Tag("Prof")
 	@DisplayName("Should get prof infotmation After login")
     void checkProfInfoExits(){
 		

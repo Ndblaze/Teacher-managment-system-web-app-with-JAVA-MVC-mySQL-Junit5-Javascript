@@ -6,6 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <title>List of Users</title>
 <style>
 	<%@include file="/cssfiles/ListOfStudents.css"%>
@@ -37,6 +38,7 @@
                      <th>Update</th>
                      <th>Delete</th>
                  </tr>
+                 </thead>
                  <tbody id="tableBody">    
                      <c:forEach var="i" begin="0" end="${usersList.size()-1}" step="1">
                 
@@ -53,7 +55,6 @@
                        </tr>
                       </c:forEach>
              </tbody>    
-            </thead>
         </table>
         </div>
    </div>

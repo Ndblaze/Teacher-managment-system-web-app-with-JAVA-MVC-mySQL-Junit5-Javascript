@@ -32,17 +32,16 @@
                    <th>List</th>
                    <th>Delete</th>
                 </tr>
-            
+             </thead>
               <tbody id="tableBody">       
                 <c:forEach var="i" begin="0" end="${usersList.size()-1}" step="1">
                    <tr>
                     <td>  <c:out value="${usersList[i].group}" /> </td>
-                    <td><a href="/DaawMiniProject/StudentListServlet?group=${usersList[i].group}"> list</a></td>
+                    <td><a href="/DaawMiniProject/StudentListServlet?group=${usersList[i].group}"><i class="fa fa-solid fa-list list"></i></a></td>
                      <td><a href="/DaawMiniProject/deleteGroupeServlet?userid=${usersList[i].id}&group=${usersList[i].group}"> <i class="fa fa-trash" aria-hidden="true"></i> </a></td>
                   </tr>
                  </c:forEach>           
             </tbody>    
-         </thead>
       </table>
       </div>
    </div>

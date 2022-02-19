@@ -21,12 +21,12 @@
  <div id="links">
 	  <div id="link">
 		  <div id="left">
-			  <a class="active" href="http://localhost:8080/DaawMiniProject/Prof/ProfHeader.jsp"> <img alt="logo" src="images/logo3.png" class="logo"/>  </a>
+			  <a class="active" href="http://localhost:8080/DaawMiniProject/loginServlet"> <img alt="logo" src="images/logo3.png" class="logo"/>  </a>
 			
 		  </div>
 		  <div id="rightP">
-		      <a href="http://localhost:8080/DaawMiniProject/groupListP">Faire l’appel</a>
-			  <a href="http://localhost:8080/DaawMiniProject/PresenceGroupservlet">Relevé de présence</a>
+		      <a href="http://localhost:8080/DaawMiniProject/groupListP">Add session</a>
+			  <a href="http://localhost:8080/DaawMiniProject/PresenceGroupservlet">Check presence</a>
 			  <a href="http://localhost:8080/DaawMiniProject/updateTeacherHimself?id=${user.id}">Profile</a>
 		 	  <a href="http://localhost:8080/DaawMiniProject/logoutServlet">Logout<i class="fa fa-sign-out" aria-hidden="true"></i></a>
 		  </div>

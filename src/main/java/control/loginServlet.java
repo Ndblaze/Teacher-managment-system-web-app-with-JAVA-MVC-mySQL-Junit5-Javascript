@@ -24,9 +24,16 @@ public class loginServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		if (request.getSession().getAttribute("user") != null) {			
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/Admin/AdminHome.jsp");
-			dispatcher.include(request, response);			
+		if (request.getSession().getAttribute("user") != null) {	
+			String type = (String) request.getSession().getAttribute("type");
+			if(type.contains("Administrateur")) {
+				RequestDispatcher dispatcher = request.getRequestDispatcher("/Admin/AdminHome.jsp");
+				dispatcher.include(request, response);	
+			}else {
+				RequestDispatcher dispatcher = request.getRequestDispatcher("/Prof/ProfHome.jsp");
+				dispatcher.include(request, response);	
+			}
+					
 		} else {			
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/login.jsp");
 			dispatcher.include(request, response);
@@ -50,7 +57,8 @@ public class loginServlet extends HttpServlet {
 			}
 			if (user != null) {
 				HttpSession session = request.getSession();
-				session.setAttribute("user", user);			
+				session.setAttribute("user", user);
+				session.setAttribute("type", type);	
 				if (type.contains("Enseignant") ) {
 					System.out.println("I'm a teacher ");
 					dispatcher = request.getRequestDispatcher("/Prof/ProfHome.jsp");

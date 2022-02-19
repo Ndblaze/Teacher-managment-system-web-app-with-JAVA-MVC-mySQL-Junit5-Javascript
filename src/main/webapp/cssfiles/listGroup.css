@@ -38,7 +38,10 @@ button{
   border-collapse: collapse;
   margin: 15px 0;
   min-width: 300px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 15);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 5px 5px 0 0;
+  font-size: 0.9em;
+  overflow: hidden;
 }
 
 #tableBody a {
@@ -49,12 +52,22 @@ button{
 .userTable thead tr {
   background-color: pink;
   font-weight: bold;
-  color: rgba(15, 27, 6, 0.822);
+  font-size: 1.1em;
+  /*  color: rgba(15, 27, 6, 0.822); */
+  color: white;
   text-align: left;
 }
 
-.userTable tr {
-  border-bottom: 1px solid gray;
+.userTable tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.userTable tbody tr:nth-of-type(even){
+  background-color: #f3f3f3;
+}
+
+.userTable tbody tr:last-of-type{
+   border-bottom: 4px solid pink;
 }
 
 .userTable thead th,
@@ -64,12 +77,22 @@ button{
   
 }
 
-.userTable tbody td a i{
-  color: red;
+.userTable tbody td a{
+    margin-left: 3px;
 }
 
+.userTable tbody td a i{
+  color: red;
+  opacity: 0.7;
+}
 
-.userTable tbody tr:hover {
+.userTable tbody td a .list{
+  font-size: 20px;
+  color: black;
+  opacity: 0.5;
+}
+
+.userTable tbody tr:hover{
   background-color: rgba(255, 255, 255, 0.4);
 }
 

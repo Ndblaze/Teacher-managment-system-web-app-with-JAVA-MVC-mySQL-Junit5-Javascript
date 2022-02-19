@@ -37,27 +37,41 @@ button{
   border-collapse: collapse;
   margin: 25px 0;
   min-width: 400px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 15);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 5px 5px 0 0;
+  font-size: 0.9em;
+  overflow: hidden;
 }
 
 #tableBody a {
 	color: black;
 }
 
+
 .userTable thead tr {
   background-color: pink;
   font-weight: bold;
-  color: rgba(15, 27, 6, 0.822);
+  font-size: 1.1em;
+  /*  color: rgba(15, 27, 6, 0.822); */
+  color: white;
   text-align: left;
 }
 
-.userTable tr {
-  border-bottom: 1px solid gray;
+.userTable tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.userTable tbody tr:nth-of-type(even){
+  background-color: #f3f3f3;
+}
+
+.userTable tbody tr:last-of-type{
+   border-bottom: 4px solid pink;
 }
 
 .userTable thead th,
 .userTable tbody td {
-  padding: 10px 35px;
+  padding: 10px 30px;
 }
 
 .userTable tbody td a{
@@ -76,5 +90,5 @@ button{
 
 
 .userTable tbody tr:hover {
-  background-color: rgba(255, 255, 255, 0.4);
+  color: pink;
 }

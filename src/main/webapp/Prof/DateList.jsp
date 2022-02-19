@@ -25,6 +25,7 @@
         <table class="userTable" >
            <thead>
                <tr> 
+                   <th>#</th>
                    <th>Date</th>
                    <th>List</th>
                 </tr>
@@ -32,8 +33,9 @@
               <tbody id="tableBody">       
                 <c:forEach var="i" begin="0" end="${sessionList.size()-1}" step="1">
                    <tr>
+                   <td> <c:out value="${ 1 + i}" /> </td>
                     <td> <c:out value="${sessionList[i].date}" /> </td>
-                    <td> <a href="/DaawMiniProject/listStudentOfSessionsServlet?date=${sessionList[i].date}&group=${sessionList[i].groupName}&module=${user.module}"> list</a></td>
+                    <td> <a href="/DaawMiniProject/listStudentOfSessionsServlet?date=${sessionList[i].date}&group=${sessionList[i].groupName}&module=${user.module}"> <i class="fa fa-solid fa-list list"></i></a></td>
                   </tr>
                  </c:forEach>           
             </tbody>    

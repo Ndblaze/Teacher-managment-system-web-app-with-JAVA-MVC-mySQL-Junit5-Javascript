@@ -30,7 +30,7 @@
                 <c:forEach var="i" begin="0" end="${usersList.size()-1}" step="1">
                    <tr>
                     <td>  <c:out value="${usersList[i].group}" /> </td>
-                    <td> <a href="/DaawMiniProject/PresenceListServlet?group=${usersList[i].group}&module=${user.module}"> list</a></td>
+                    <td> <a href="/DaawMiniProject/PresenceListServlet?group=${usersList[i].group}&module=${user.module}"> <i class="fa fa-solid fa-list list"></i></a></td>
                   </tr>
                  </c:forEach>           
             </tbody>    
